@@ -1,4 +1,4 @@
-class Board_Queue:
+class Board:
     def __init__(self):
         self.elems = []
 
@@ -12,9 +12,9 @@ class Board_Queue:
         return str(self.elems)
 
 
-in_work = Board_Queue()
-rework = Board_Queue()
-finish = Board_Queue()
+in_work = Board()
+rework = Board()
+finish = Board()
 
 in_work.to_queue('task1')
 in_work.to_queue('task2')
