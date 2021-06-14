@@ -1,11 +1,11 @@
 from random import randint
 
-def top_profit1(): # O(n)
+def top_profit1(): # O(n log n)
     sorted_dict = {}
     sorted_company = sorted(company, key=company.get, reverse=True)
-    for v in sorted_company:
-        sorted_dict[v] = company[v]
-        top_profit = list(sorted_dict.items())[:3]
+    for v in sorted_company:  # O(n)
+        sorted_dict[v] = company[v]  # O(1)
+        top_profit = list(sorted_dict.items())[:3]  # O(n log n)
     print('компании с максимальной прибылью: ', top_profit)
 
 def top_profit2(): # O(n^2)
@@ -13,9 +13,9 @@ def top_profit2(): # O(n^2)
     sorted_company = sorted(company.values(), reverse=True)
     for i in sorted_company: # O(n)
         for keys in company.keys(): # O(n)
-            if company[keys] == i:
-                sorted_dict[keys] = company[keys]
-        top_profit = list(sorted_dict.items())[:3]
+            if company[keys] == i:  # O(1)
+                sorted_dict[keys] = company[keys]  # O(1)
+        top_profit = list(sorted_dict.items())[:3]  # O(n log n)
     print('компании с максимальной прибылью: ', top_profit)
 
 
