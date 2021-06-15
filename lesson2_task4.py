@@ -1,11 +1,11 @@
-def sum_numbers(n, a=1, sum_a=[]):
+def sum_numbers(n, start_number=1, list_numb=[]):
     if n == 0:
-       print('числа в списке - ', sum_a, 'сумма чисел этих чисел равна', sum(sum_a))
+       print('числа в списке - ', list_numb, 'сумма чисел этих чисел равна', sum(list_numb))
     else:
-        sum_a.append(a)
-        a = a / -2
+        list_numb.append(start_number)
+        start_number = start_number / -2
         n -= 1
-        return sum_numbers(n, a, sum_a)
+        return sum_numbers(n, start_number, list_numb)
 
 
 n = int(input('введите количество цифр для расчета '))
