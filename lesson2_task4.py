@@ -7,4 +7,7 @@ def sum_numbers(n, a=1, sum_a=[]):
         n -= 1
         return sum_numbers(n, a, sum_a)
 
-sum_numbers(5)
+
+n = int(input('введите количество цифр для расчета '))
+
+sum_numbers(n)
