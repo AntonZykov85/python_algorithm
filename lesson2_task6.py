@@ -1,7 +1,7 @@
 import random
 
 def guess_number(answer = int(input('Введите число: ')), guess_num = random.randint(0, 100), counter = 10):
-    print(guess_num)
+    print(guess_num) # вставлено для проверки работы кода. в одной из попыток написать, переменная обновлялась в каждой итерации.
     if answer == guess_num or counter == 0:
         if answer == guess_num:
             print('Поздравляю, Вы отгадали!')
@@ -21,9 +21,5 @@ def guess_number(answer = int(input('Введите число: ')), guess_num =
             print('введите число, попытка сгорела!')
             return guess_number(answer, guess_num, counter)
 
-
-"""guess_num = random.randint(0, 100)
-answer = int(input('Введите число: '))
-counter = 10"""
 
 guess_number()
